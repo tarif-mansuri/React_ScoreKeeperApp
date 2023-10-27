@@ -22,6 +22,7 @@ const App = ()=>{
             <button onClick={oneRun}>4</button>
             <button onClick={oneRun}>5</button>
             <button onClick={oneRun}>6</button>
+            {/* Inline Function */}
             <button onClick={()=>oneWicket(1)}>Wicket</button>
         </div>
     </>

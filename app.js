@@ -2,16 +2,21 @@ let score = 0;
 let wickets = 0;
 
 const oneRun = (event)=>{
-    score += parseInt(event.target.innerText);
+    if(wickets<10){
+        score += parseInt(event.target.innerText);
+    }
+    rootElement.render(<App />);
 }
 
 const oneWicket = (event)=>{
-    wickets += 1;
+    if(wickets<10){
+        wickets += 1;
+    }
+    rootElement.render(<App />);
 }
 
 
 const App = ()=>{
-    rootElement.render(<App />);
     return <>
         <h1>SCORE KEEPER</h1>
         <h2>SCORE: {score}/{wickets}</h2>
